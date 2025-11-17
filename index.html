@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Soares - Onde seu dinheiro rende mais!</title>
+    <link rel="stylesheet" href="css/sytle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
+</head>
+<body>
+  
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="imagem/ambiente/logo.png" alt="Logo do Mercado Soares" class="logo">
+                <div class="header-text">
+                    <h1>Mercado Soares</h1>
+                    <p class="slogan">Onde seu dinheiro rende mais!</p>
+                </div>
+            </div>
+            
+            <nav class="header-nav" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="pedidos.html" class="nav-link"><i class="fas fa-shopping-basket"></i> Pedidos</a></li>
+                    <li><a href="feedback.html" class="nav-link"><i class="fas fa-comment-alt"></i> Feedback</a></li>
+                    <li><a href="cadastro.html" class="nav-link"><i class="fas fa-user-plus"></i> Cadastro</a></li>
+                    <li><a href="contato.html" class="nav-link"><i class="fas fa-envelope"></i> Contato</a></li>
+                </ul>
+            </nav>
+            
+            <div class="cart-indicator">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+   
+    <section class="promo-banner">
+        <div class="banner-content">
+            <h2>Ofertas Especiais da Semana!</h2>
+            <p>Descontos de até 30% em produtos selecionados</p>
+            <button class="banner-btn">Ver Ofertas</button>
+        </div>
+    </section>
+
+  
+    <div class="container">
+        <main id="products-section">
+            <div class="section-header">
+                <h2>Nossos Produtos</h2>
+                <div class="search-filter">
+                    <input type="text" id="search-input" placeholder="Buscar produtos...">
+                    <select id="category-filter">
+                        <option value="all">Todas as categorias</option>
+                        <option value="hortifruti">Hortifruti</option>
+                        <option value="bebidas">Bebidas</option>
+                        <option value="mercearia">Mercearia</option>
+                        <option value="padaria">Padaria</option>
+                    </select>
+                </div>
+            </div>
+            <section class="product-grid" aria-labelledby="produtos-titulo">
+                <h2 id="produtos-titulo" class="sr-only">Lista de Produtos Disponíveis</h2>
+                <article class="product-card" data-id="1" data-nome="Banana Caturra (kg)" data-preco="5.50" data-category="hortifruti">
+                    <div class="product-badge">Oferta</div>
+                    <img src="imagem/banana.jpg" alt="Um cacho de bananas caturra amarelas.">
+                    <h3>Banana Caturra (kg)</h3>
+                    <p class="product-description">Bananas frescas e saborosas, perfeitas para seu café da manhã.</p>
+                    <div class="price-section">
+                        <p class="price">R$ 5,50</p>
+                        <p class="old-price">R$ 6,90</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="add-to-cart-btn" aria-label="Adicionar Banana Caturra ao carrinho">
+                            <i class="fas fa-cart-plus"></i> Adicionar
+                        </button>
+                        <div class="quantity-controls">
+                            <button class="qty-btn minus" aria-label="Diminuir quantidade">-</button>
+                            <span class="qty-display">1</span>
+                            <button class="qty-btn plus" aria-label="Aumentar quantidade">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-id="2" data-nome="Café em Grãos (500g)" data-preco="25.00" data-category="mercearia">
+                    <img src="imagem/cafe.jpg" alt="Saco de café em grãos ao lado de uma xícara.">
+                    <h3>Café em Grãos (500g)</h3>
+                    <p class="product-description">Café premium em grãos, torrado recentemente para máximo sabor.</p>
+                    <div class="price-section">
+                        <p class="price">R$ 25,00</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="add-to-cart-btn" aria-label="Adicionar Café em Grãos ao carrinho">
+                            <i class="fas fa-cart-plus"></i> Adicionar
+                        </button>
+                        <div class="quantity-controls">
+                            <button class="qty-btn minus" aria-label="Diminuir quantidade">-</button>
+                            <span class="qty-display">1</span>
+                            <button class="qty-btn plus" aria-label="Aumentar quantidade">+</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product-card" data-id="3" data-nome="Leite Integral (Litro)" data-preco="4.75" data-category="bebidas">
+                    <div class="product-badge">Popular</div>
+                    <img src="imagem/leite.jpg" alt="Caixa de leite integral de 1 litro em um fundo branco.">
+                    <h3>Leite Integral (Litro)</h3>
+                    <p class="product-description">Leite fresco integral, rico em nutrientes e cálcio.</p>
+                    <div class="price-section">
+                        <p class="price">R$ 4,75</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="add-to-cart-btn" aria-label="Adicionar Leite Integral ao carrinho">
+                            <i class="fas fa-cart-plus"></i> Adicionar
+                        </button>
+                        <div class="quantity-controls">
+                            <button class="qty-btn minus" aria-label="Diminuir quantidade">-</button>
+                            <span class="qty-display">1</span>
+                            <button class="qty-btn plus" aria-label="Aumentar quantidade">+</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product-card" data-id="4" data-nome="Arroz Branco (5kg)" data-preco="28.90" data-category="mercearia">
+                    <img src="imagem/arroz.jpg" alt="Saco transparente mostrando grãos de arroz branco.">
+                    <h3>Arroz Branco (5kg)</h3>
+                    <p class="product-description">Arroz de alta qualidade, grãos soltinhos e saborosos.</p>
+                    <div class="price-section">
+                        <p class="price">R$ 28,90</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="add-to-cart-btn" aria-label="Adicionar Arroz Branco ao carrinho">
+                            <i class="fas fa-cart-plus"></i> Adicionar
+                        </button>
+                        <div class="quantity-controls">
+                            <button class="qty-btn minus" aria-label="Diminuir quantidade">-</button>
+                            <span class="qty-display">1</span>
+                            <button class="qty-btn plus" aria-label="Aumentar quantidade">+</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product-card" data-id="5" data-nome="Macarrão Espaguete (500g)" data-preco="3.99" data-category="mercearia">
+                    <div class="product-badge">Novo</div>
+                    <img src="imagem/espaguete.jpg" alt="Pacote de macarrão do tipo espaguete.">
+                    <h3>Macarrão Espaguete (500g)</h3>
+                    <p class="product-description">Massa italiana de alta qualidade, perfeita para suas receitas.</p>
+                    <div class="price-section">
+                        <p class="price">R$ 3,99</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="add-to-cart-btn" aria-label="Adicionar Macarrão Espaguete ao carrinho">
+                            <i class="fas fa-cart-plus"></i> Adicionar
+                        </button>
+                        <div class="quantity-controls">
+                            <button class="qty-btn minus" aria-label="Diminuir quantidade">-</button>
+                            <span class="qty-display">1</span>
+                            <button class="qty-btn plus" aria-label="Aumentar quantidade">+</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product-card" data-id="6" data-nome="Pão Francês (unidade)" data-preco="0.75" data-category="padaria">
+                    <img src="imagem/pao.jpg" alt="Cesta com vários pães do tipo francês.">
+                    <h3>Pão Francês (unidade)</h3>
+                    <p class="product-description">Pão fresquinho, crocante por fora e macio por dentro.</p>
+                    <div class="price-section">
+                        <p class="price">R$ 0,75</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="add-to-cart-btn" aria-label="Adicionar Pão Francês ao carrinho">
+                            <i class="fas fa-cart-plus"></i> Adicionar
+                        </button>
+                        <div class="quantity-controls">
+                            <button class="qty-btn minus" aria-label="Diminuir quantidade">-</button>
+                            <span class="qty-display">1</span>
+                            <button class="qty-btn plus" aria-label="Aumentar quantidade">+</button>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <aside id="cart-section">
+            <div class="cart-header">
+                <h2><i class="fas fa-shopping-cart"></i> Meu Carrinho</h2>
+                <button id="clear-cart" class="clear-cart-btn" title="Limpar carrinho">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </div>
+            <div id="cart-items" class="cart-items">
+                <div class="empty-cart">
+                    <i class="fas fa-shopping-basket"></i>
+                    <p>Seu carrinho está vazio.</p>
+                </div>
+            </div>
+            <div class="cart-summary">
+                <div class="cart-total">
+                    <strong>Total:</strong>
+                    <span id="cart-total-value">R$ 0,00</span>
+                </div>
+                <div class="cart-savings">
+                    <span id="cart-savings">Você economizou R$ 0,00</span>
+                </div>
+                <button id="checkout-btn" class="checkout-button">
+                    <i class="fas fa-credit-card"></i> Finalizar Compra
+                </button>
+            </div>
+        </aside>
+    </div>
+    <section id="nota-fiscal" class="container hidden">
+        <div class="invoice-container">
+            <div class="invoice-header">
+                <h2><i class="fas fa-receipt"></i> Nota Fiscal</h2>
+                <button class="print-btn" onclick="window.print()">
+                    <i class="fas fa-print"></i> Imprimir
+                </button>
+            </div>
+            <div id="nota-fiscal-details" class="invoice-details"></div>
+            <div class="invoice-actions">
+                <button onclick="window.location.reload()" class="new-purchase-btn">
+                    <i class="fas fa-plus"></i> Nova Compra
+                </button>
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Mercado Soares</h3>
+                <p>Há mais de 20 anos oferecendo os melhores produtos com os preços mais justos.</p>
+                <div class="social-links">
+                    <a href="https://facebook.com/rosoarees" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                    <a href="https://instagram.com/rosoareess" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="pedidos.html">Pedidos Especiais</a></li>
+                    <li><a href="feedback.html">Deixe seu Feedback</a></li>
+                    <li><a href="cadastro.html">Cadastre-se</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Horário de Funcionamento</h3>
+                <p>Segunda a Sábado: 7h às 20h</p>
+                <p>Domingos e Feriados: 7h às 13h</p>
+                <p>Delivery: 8h às 19h</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Rua dos Sabores, 123 - Centro</p>
+                <p><i class="fas fa-phone"></i> (11) 7070-7070</p>
+                <p><i class="fas fa-envelope"></i> contato@mercadosoares.com</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Mercado Soares. Todos os direitos reservados.</p>
+            <p>Projeto Desenvolvido para o Curso Front End do Senai!</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
