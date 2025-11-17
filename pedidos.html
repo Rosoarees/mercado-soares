@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulário de Pedidos Especiais - Mercado Soares">
+    <title>Pedidos Especiais - Mercado Soares</title>
+    <link rel="stylesheet" href="css/sytle.css">
+    <link rel="stylesheet" href="css/formularios.css">
+</head>
+<body>
+    <header id="cabecalho-principal" class="main-header">
+        <div class="header-logo-area">
+            <img src="imagem/ambiente/logo.png" alt="Logo do Mercado Soares" width="80" height="80">
+            <h1>Pedidos Especiais - Mercado Soares</h1>
+        </div>
+        <nav class="header-nav" aria-label="Navegação principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="form-section">
+            <h2>Formulário de Pedidos Especiais</h2>
+            <p>Faça seu pedido personalizado para eventos e ocasiões especiais!</p>
+            
+            <form id="form-pedidos" class="mercado-form" novalidate>
+                <fieldset>
+                    <legend>Dados do Cliente</legend>
+                    
+                    <div class="form-group">
+                        <label for="nome-pedido" class="form-label required">
+                            Nome Completo
+                        </label>
+                        <input type="text" id="nome-pedido" name="nome" 
+                               class="form-input" required
+                               placeholder="Digite seu nome completo">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="telefone-pedido" class="form-label required">
+                                Telefone
+                            </label>
+                            <input type="tel" id="telefone-pedido" name="telefone" 
+                                   class="form-input" required
+                                   placeholder="(11) 99999-9999"
+                                   pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email-pedido" class="form-label required">
+                                E-mail
+                            </label>
+                            <input type="email" id="email-pedido" name="email" 
+                                   class="form-input" required
+                                   placeholder="seu@email.com">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Detalhes do Pedido</legend>
+                    
+                    <div class="form-group">
+                        <label for="tipo-produto" class="form-label required">
+                            Tipo de Produto
+                        </label>
+                        <select id="tipo-produto" name="tipo_produto" class="form-select" required>
+                            <option value="">Selecione o tipo de produto</option>
+                            <option value="paes">Pães Artesanais</option>
+                            <option value="bolos">Bolos Caseiros</option>
+                            <option value="tortas">Tortas Especiais</option>
+                            <option value="salgados">Salgados</option>
+                            <option value="frios">Frios e Queijos</option>
+                            <option value="bebidas">Bebidas</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sabor-recheio" class="form-label">
+                            Sabor/Recheio Preferido
+                        </label>
+                        <input type="text" id="sabor-recheio" name="sabor_recheio" 
+                               class="form-input"
+                               placeholder="Ex: Chocolate, Frango, Queijo..."
+                               maxlength="100">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="data-entrega" class="form-label required">
+                            Data de Entrega/Retirada
+                        </label>
+                        <input type="date" id="data-entrega" name="data_entrega" 
+                               class="form-input" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Informações Adicionais</legend>
+                    
+                    <div class="form-group">
+                        <label for="observacoes-pedido" class="form-label">
+                            Observações Especiais
+                        </label>
+                        <textarea id="observacoes-pedido" name="observacoes" 
+                                  class="form-textarea"
+                                  placeholder="Alguma observação especial? Alergias? Quantidade aproximada?"
+                                  rows="4" maxlength="500"></textarea>
+                        <div class="char-counter">
+                            <span id="contador-observacoes">0</span>/500 caracteres
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="orcamento-pedido" class="form-label">
+                            Orçamento Aproximado (R$)
+                        </label>
+                        <input type="text" id="orcamento-pedido" name="orcamento" 
+                               class="form-input"
+                               placeholder="0,00"
+                               inputmode="decimal">
+                        <span class="form-hint">Valor aproximado que pretende investir</span>
+                    </div>
+                </fieldset>
+
+                <div class="form-actions">
+                    <button type="reset" class="btn btn-secondary">Limpar</button>
+                    <button type="submit" class="btn btn-primary">Solicitar Orçamento</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Mercado Soares. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  
+</body>
+</html>

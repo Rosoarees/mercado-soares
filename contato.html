@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulário de Contato - Mercado Soares">
+    <title>Contato - Mercado Soares</title>
+    <link rel="stylesheet" href="css/sytle.css">
+    <link rel="stylesheet" href="css/formularios.css">
+</head>
+<body>
+    <header id="cabecalho-principal" class="main-header">
+        <div class="header-logo-area">
+            <img src="imagem/ambiente/logo.png" alt="Logo do Mercado Soares" width="80" height="80">
+            <h1>Contato - Mercado Soares</h1>
+        </div>
+        <nav class="header-nav" aria-label="Navegação principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="pedidos.html">Pedidos</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="form-section">
+            <h2>Formulário de Contato Geral</h2>
+            <p>Entre em contato conosco. Responderemos o mais breve possível!</p>
+            
+            <form id="form-contato" class="mercado-form" novalidate>
+                <fieldset>
+                    <legend>Informações Pessoais</legend>
+                    
+                    <div class="form-group">
+                        <label for="nome-contato" class="form-label required">
+                            Nome Completo
+                        </label>
+                        <input type="text" id="nome-contato" name="nome" 
+                               class="form-input" required 
+                               placeholder="Digite seu nome completo"
+                               minlength="2" maxlength="100">
+                        <span class="form-hint">Mínimo 2 caracteres</span>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email-contato" class="form-label required">
+                                E-mail
+                            </label>
+                            <input type="email" id="email-contato" name="email" 
+                                   class="form-input" required
+                                   placeholder="seu@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefone-contato" class="form-label">
+                                Telefone
+                            </label>
+                            <input type="tel" id="telefone-contato" name="telefone" 
+                                   class="form-input"
+                                   placeholder="(11) 99999-9999"
+                                   pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}">
+                            <span class="form-hint">Formato: (11) 99999-9999</span>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Detalhes da Mensagem</legend>
+                    
+                    <div class="form-group">
+                        <label for="assunto-contato" class="form-label required">
+                            Assunto
+                        </label>
+                        <select id="assunto-contato" name="assunto" class="form-select" required>
+                            <option value="">Selecione um assunto</option>
+                            <option value="informacoes">ℹ️ Informações gerais</option>
+                            <option value="reclamacao">⚠️ Reclamação</option>
+                            <option value="sugestao">💡 Sugestão</option>
+                            <option value="elogio">🌟 Elogio</option>
+                            <option value="pedido-especial">🎂 Pedido especial</option>
+                            <option value="outros">❓ Outros</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensagem-contato" class="form-label required">
+                            Mensagem
+                        </label>
+                        <textarea id="mensagem-contato" name="mensagem" 
+                                  class="form-textarea" required
+                                  placeholder="Descreva sua mensagem aqui..."
+                                  minlength="10" maxlength="1000"
+                                  rows="6"></textarea>
+                        <span class="form-hint">Mínimo 10 caracteres</span>
+                        <div class="char-counter">
+                            <span id="contador-mensagem">0</span>/1000 caracteres
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="form-actions">
+                    <button type="reset" class="btn btn-secondary">Limpar</button>
+                    <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Mercado Soares. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

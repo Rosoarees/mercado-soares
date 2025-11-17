@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulário de Feedback - Mercado Soares">
+    <title>Feedback - Mercado Soares</title>
+    <link rel="stylesheet" href="css/sytle.css">
+    <link rel="stylesheet" href="css/formularios.css">  
+</head>
+<body>
+    <header id="cabecalho-principal" class="main-header">
+        <div class="header-logo-area">
+            <img src="imagem/ambiente/logo.png" alt="Logo do Mercado Soares" width="80" height="80">
+            <h1>Feedback - Mercado Soares</h1>
+        </div>
+        <nav class="header-nav" aria-label="Navegação principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="pedidos.html">Pedidos</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="form-section">
+            <h2>Formulário de Feedback</h2>
+            <p>Sua opinião é muito importante para melhorarmos nossos produtos e serviços!</p>
+            
+            <form id="form-feedback" class="mercado-form" novalidate>
+                <fieldset>
+                    <legend>Informações Pessoais (Opcionais)</legend>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nome-feedback" class="form-label">
+                                Nome
+                            </label>
+                            <input type="text" id="nome-feedback" name="nome" 
+                                   class="form-input"
+                                   placeholder="Seu nome (opcional)"
+                                   maxlength="100">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email-feedback" class="form-label">
+                                E-mail
+                            </label>
+                            <input type="email" id="email-feedback" name="email" 
+                                   class="form-input"
+                                   placeholder="seu@email.com (opcional)">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Avaliação</legend>
+                    
+                    <div class="form-group">
+                        <label for="produto-servico" class="form-label required">
+                            Produto/Serviço Avaliado
+                        </label>
+                        <select id="produto-servico" name="produto_servico" class="form-select" required>
+                            <option value="">Selecione o que está avaliando</option>
+                            <option value="paes">Pães Tradicionais</option>
+                            <option value="mercearia">Produtos de Mercearia</option>
+                            <option value="hortifruti">Hortifruti</option>
+                            <option value="frios">Frios e Laticínios</option>
+                            <option value="atendimento">Atendimento</option>
+                            <option value="ambiente">Ambiente da Loja</option>
+                            <option value="precos">Preços</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <span id="avaliacao-legend" class="sr-only">Selecione sua avaliação geral</span>
+                        <label class="form-label required">Avaliação Geral</label>
+                        <div class="radio-group" role="radiogroup" aria-labelledby="avaliacao-legend">
+                            <div class="radio-item">
+                                <input type="radio" id="avaliacao-excelente" name="avaliacao" value="excelente" required>
+                                <label for="avaliacao-excelente" class="radio-label">
+                                    <span class="rating-stars">⭐⭐⭐⭐⭐</span>
+                                    Excelente
+                                </label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="avaliacao-bom" name="avaliacao" value="bom" required>
+                                <label for="avaliacao-bom" class="radio-label">
+                                    <span class="rating-stars">⭐⭐⭐⭐</span>
+                                    Bom
+                                </label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="avaliacao-regular" name="avaliacao" value="regular" required>
+                                <label for="avaliacao-regular" class="radio-label">
+                                    <span class="rating-stars">⭐⭐⭐</span>
+                                    Regular
+                                </label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="avaliacao-ruim" name="avaliacao" value="ruim" required>
+                                <label for="avaliacao-ruim" class="radio-label">
+                                    <span class="rating-stars">⭐⭐</span>
+                                    Ruim
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comentarios-feedback" class="form-label required">
+                            Comentários
+                        </label>
+                        <textarea id="comentarios-feedback" name="comentarios" 
+                                  class="form-textarea" required
+                                  placeholder="Conte-nos mais sobre sua experiência..."
+                                  rows="5" maxlength="1000"></textarea>
+                        <div class="char-counter">
+                            <span id="contador-comentarios">0</span>/1000 caracteres
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Permissões</legend>
+                    
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="recomendaria-feedback" name="recomendaria" value="sim">
+                            <label for="recomendaria-feedback" class="checkbox-label">
+                                👍 Recomendaria o Mercado Soares para amigos e familiares
+                            </label>
+                        </div>
+                        
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="publicacao-feedback" name="publicacao" value="sim">
+                            <label for="publicacao-feedback" class="checkbox-label">
+                                📰 Autorizo a publicação do meu depoimento (anonimamente)
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="form-actions">
+                    <button type="reset" class="btn btn-secondary">Limpar</button>
+                    <button type="submit" class="btn btn-primary">Enviar Feedback</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Mercado Soares. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>

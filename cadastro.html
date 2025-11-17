@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulário de Cadastro - Mercado Soares">
+    <title>Cadastro - Mercado Soares</title>
+    <link rel="stylesheet" href="css/sytle.css">
+    <link rel="stylesheet" href="css/formularios.css">
+</head>
+<body>
+    <header id="cabecalho-principal" class="main-header">
+        <div class="header-logo-area">
+            <img src="imagem/ambiente/logo.png" alt="Logo do Mercado Soares" width="80" height="80">
+            <h1>Cadastro - Mercado Soares</h1>
+        </div>
+        <nav class="header-nav" aria-label="Navegação principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="pedidos.html">Pedidos</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="form-section">
+            <h2>Cadastro e Newsletter</h2>
+            <p>Cadastre-se para receber promoções exclusivas e novidades do Mercado Soares!</p>
+            
+            <form id="form-cadastro" class="mercado-form" novalidate>
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    
+                    <div class="form-group">
+                        <label for="nome-cadastro" class="form-label required">
+                            Nome Completo
+                        </label>
+                        <input type="text" id="nome-cadastro" name="nome" 
+                               class="form-input" required
+                               placeholder="Digite seu nome completo"
+                               minlength="2" maxlength="100">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email-cadastro" class="form-label required">
+                                E-mail
+                            </label>
+                            <input type="email" id="email-cadastro" name="email" 
+                                   class="form-input" required
+                                   placeholder="seu@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefone-cadastro" class="form-label required">
+                                Telefone
+                            </label>
+                            <input type="tel" id="telefone-cadastro" name="telefone" 
+                                   class="form-input" required
+                                   placeholder="(11) 99999-9999"
+                                   pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nascimento-cadastro" class="form-label">
+                            Data de Nascimento
+                        </label>
+                        <input type="date" id="nascimento-cadastro" name="nascimento" 
+                               class="form-input"
+                                 max="2006-12-31">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Endereço</legend>
+                    
+                    <div class="form-row">
+                        <div class="form-group" style="flex: 2;">
+                            <label for="rua-cadastro" class="form-label required">
+                                Rua
+                            </label>
+                            <input type="text" id="rua-cadastro" name="rua" 
+                                   class="form-input" required
+                                   placeholder="Nome da rua"
+                                   maxlength="100">
+                        </div>
+
+                        <div class="form-group" style="flex: 1;">
+                            <label for="numero-cadastro" class="form-label required">
+                                Número
+                            </label>
+                            <input type="number" id="numero-cadastro" name="numero" 
+                                   class="form-input" required
+                                   placeholder="123"
+                                   min="1">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="bairro-cadastro" class="form-label required">
+                                Bairro
+                            </label>
+                            <input type="text" id="bairro-cadastro" name="bairro" 
+                                   class="form-input" required
+                                   placeholder="Seu bairro"
+                                   maxlength="50">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cep-cadastro" class="form-label required">
+                                CEP
+                            </label>
+                            <input type="text" id="cep-cadastro" name="cep" 
+                                   class="form-input" required
+                                   placeholder="00000-000"
+                                   pattern="[0-9]{5}-[0-9]{3}"
+                                   maxlength="9">
+                            <span class="form-hint">Formato: 00000-000</span>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Preferências</legend>
+                    <p class="form-hint">Marque os tipos de produtos que mais te interessam:</p>
+                    
+                    <div class="checkbox-grid">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="pref-paes" name="preferencias[]" value="paes">
+                            <label for="pref-paes" class="checkbox-label">
+                                🥖 Pães Artesanais
+                            </label>
+                        </div>
+                        
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="pref-mercearia" name="preferencias[]" value="mercearia">
+                            <label for="pref-mercearia" class="checkbox-label">
+                                🛒 Produtos de Mercearia
+                            </label>
+                        </div>
+                        
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="pref-hortifruti" name="preferencias[]" value="hortifruti">
+                            <label for="pref-hortifruti" class="checkbox-label">
+                                🍎 Hortifruti
+                            </label>
+                        </div>
+                        
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="pref-diet" name="preferencias[]" value="diet">
+                            <label for="pref-diet" class="checkbox-label">
+                                🥗 Produtos Diet/Light
+                            </label>
+                        </div>
+                        
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="pref-integral" name="preferencias[]" value="integral">
+                            <label for="pref-integral" class="checkbox-label">
+                                🌾 Produtos Integrais
+                            </label>
+                        </div>
+                        
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="pref-bebidas" name="preferencias[]" value="bebidas">
+                            <label for="pref-bebidas" class="checkbox-label">
+                                🥤 Bebidas
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Termos e Condições</legend>
+                    
+                    <div class="checkbox-group">
+                        <div class="checkbox-item required-checkbox">
+                            <input type="checkbox" id="promocoes-cadastro" name="promocoes" value="sim" required>
+                            <label for="promocoes-cadastro" class="checkbox-label required">
+                                📩 Aceito receber promoções e novidades por e-mail
+                            </label>
+                        </div>
+                        
+                        <div class="checkbox-item required-checkbox">
+                            <input type="checkbox" id="termos-cadastro" name="termos" value="sim" required>
+                            <label for="termos-cadastro" class="checkbox-label required">
+                                ✅ Aceito os <a href="#" target="_blank">termos de uso</a> e política de privacidade
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="form-actions">
+                    <button type="reset" class="btn btn-secondary">Limpar</button>
+                    <button type="submit" class="btn btn-primary">Finalizar Cadastro</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Mercado Soares. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
